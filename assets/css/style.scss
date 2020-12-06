@@ -1,0 +1,71 @@
+/*1remを10pxにするためのセレクター*/
+html {
+    font-size: 62.5%;
+}
+//------------------------flex boxのmixin------------------------
+@mixin flex () {
+    display: flex;
+}
+@mixin direction ($direction: row) {
+    flex-direction: $direction;
+}
+@mixin align ($align: flex-start) {
+    align-items: $align;
+}
+@mixin justify ($justify: flex-start) {
+    justify-content: $justify;
+}
+//------------------------color 変数------------------------
+$white : #fff;
+$gray: #3F434A;
+$price-color: #F5F5F5;
+$product-color: #EAD5DC;
+$vase-color: #E7E3DF;
+$footer-view-color: #EFDFC5;
+$footer-text-color: #86888C;
+//------------------------logo&textプレースホルダーセレクター------------------------
+
+
+
+/*------------------------SCROLL要素 pcのみに表示------------------------*/
+.header__pc {
+    display: none;
+    @media screen and (min-width: 769px) {
+        display: block;
+    }
+}
+
+
+/*------------------------header------------------------*/
+.header {
+    width: 100vw;
+    background-image: url("../img/top_sp.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include flex
+    @include direction(column)
+    @include align (center)
+    @include justify (center)
+        &__top {
+            width: 100%;
+            @include flex
+            @include direction(column)
+            @include align (center)
+            @include justify (center)
+            padding-top: 80px;
+        }
+        &__link {
+            .logo-img {
+                width: 45vw;
+            }
+        }
+        &__text {
+            font-family: 'Kosugi Maru', sans-serif;
+            color: $white;
+            font-size: 2rem;
+            // font-weight: bold;
+            letter-spacing: .01em;
+            padding-top: 2rem;
+        }
+}
