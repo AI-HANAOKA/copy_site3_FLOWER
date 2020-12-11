@@ -15,7 +15,8 @@ html {
 @mixin justify ($justify: flex-start) {
     justify-content: $justify;
 }
-//------------------------color 変数------------------------
+//------------------------変数------------------------
+// color
 $white : #fff;
 $gray: #3F434A;
 $price-color: #F5F5F5;
@@ -23,7 +24,56 @@ $product-color: #EAD5DC;
 $vase-color: #E7E3DF;
 $footer-view-color: #EFDFC5;
 $footer-text-color: #86888C;
-//------------------------logo&textプレースホルダーセレクター------------------------
+// width
+$section-w: 85vw;
+// paddng top
+$paddng-top: 50px;
+// paddng bottom
+$paddng-bottom: 60px;
+//------------------------プレースホルダーセレクター------------------------
+/* hover */ 
+%opacity {
+    opacity: 0.6;
+}
+/* h2 title */ 
+%h2-title {
+    font-size: 2.2rem;
+    font-family: 'Kosugi Maru', sans-serif;
+    letter-spacing: 0.1rem;
+    line-height: 1.5;
+}
+/* h3 title */
+%h3-teitle {
+    font-family: 'Kosugi Maru', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 0.01rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* p text */ 
+%p-text {
+    font-size: 1.4rem;
+    letter-spacing: 0.02em;
+    line-height: 1.5;
+}
+/* P * text */ 
+%caution {
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+}
+
+
+/* ------------------------共通スタイル------------------------ */ 
+/* img */ 
+.app-img ,
+.google-img {
+    width: 40vw;
+}
+
+
+/* 対象外エリアアニメ */ 
+
 
 
 
@@ -41,19 +91,20 @@ $footer-text-color: #86888C;
     width: 100vw;
     background-image: url("../img/top_sp.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: 70% 50%;
     background-repeat: no-repeat;
     @include flex
     @include direction(column)
     @include align (center)
     @include justify (center)
+    // header top
         &__top {
             width: 100%;
             @include flex
             @include direction(column)
             @include align (center)
             @include justify (center)
-            padding-top: 80px;
+            padding-top: 70px;
         }
         &__link {
             .logo-img {
@@ -63,9 +114,286 @@ $footer-text-color: #86888C;
         &__text {
             font-family: 'Kosugi Maru', sans-serif;
             color: $white;
-            font-size: 2rem;
+            font-size: 1.8rem;
             // font-weight: bold;
             letter-spacing: .01em;
-            padding-top: 2rem;
+            padding-top: 20px;
+            padding-bottom: 400px;
+        }
+        // header bottom
+        &__item {
+            @include flex
+            @include direction(column)
+            @include align (center)
+            @include justify (center)
+        }
+        &__link {
+            width: 100%;
+            @include flex
+            @include direction(row)
+            @include align (center)
+            @include justify (center)
+        }
+        &--opacity:active {
+            @extend %opacity;
+        }
+            .app-img ,
+            .google-img {
+                padding: 30px 5px 20px ;
+            }
+        &__caution {
+            color: $white;
+            padding-bottom: 60px;
+            @extend %caution;
         }
 }
+/*------------------------main------------------------*/
+.main {
+    width: 100vw;
+    color: $gray;
+}
+/*------------------------delivery------------------------*/
+.delivery {
+    width: 100%;
+    @include flex
+    @include direction(column)
+    @include align (center)
+    @include justify (center)
+        &__point1 ,
+        &__point2 ,
+        &__point3 {
+            width: 100vw;
+            background-image: url(../img/delivery1.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            @include flex
+            @include direction(column)
+            @include align (center)
+            @include justify (center)
+        }
+        &__point2 {
+            background-image: url(../img/delivery2.jpg);
+        }
+        &__point3 {
+            background-image: url(../img/delivery3.jpg);
+        }
+        &__point1__back ,
+        &__point2__back ,
+        &__point3__back {
+            width: $section-w;
+            color: $white;
+            @include flex
+            @include direction(column)
+            @include align (flex-start)
+            @include justify (center)
+        }
+        &__point1__title ,
+        &__point2__title ,
+        &__point3__title {
+            padding: 20px 0 15px;
+            @extend %h2-title;
+        }
+        &__point1__text ,
+        &__point2__text ,
+        &__point3__text {
+            padding-bottom: 400px;
+            @extend %p-text;
+        }
+}
+/*------------------------price date------------------------*/
+/* price */ 
+.price-date {
+    width: 100%;
+    &__price {
+        width: 100%;
+        background-color: $price-color;
+        @include flex
+        @include direction(column)
+        @include align (center)
+        @include justify (center)
+        }
+    &__price-back ,
+    &__free-trial {
+        width: $section-w;
+        @include flex
+        @include direction(column)
+        @include align (center)
+        @include justify (center)
+    }
+    &__price-title {
+        padding-top: $paddng-top;
+        @extend %h3-teitle;
+    }
+    &__free-pop {
+        width: 40vw;
+        padding-top: 15px;
+        position: relative;
+        z-index: 1;
+    }
+    &__free-img {
+        width: 65vw;
+        position: relative;
+        z-index: 0;
+        top: -20px;
+    }
+    &__once {
+        font-family: 'Kosugi Maru', sans-serif;
+        font-size: 1.5rem;
+        color: $gray;
+        font-weight: bold;
+        text-align: center;
+        @extend %p-text;
+    }
+    &--em {
+        font-size: 2rem;
+    }
+    &__shipping {
+        padding-top: 30px;
+        @extend %caution;
+    }
+    &__taxes {
+        padding-top: 10px;
+        padding-bottom: $paddng-bottom;
+        @extend %caution;
+    }
+/* tate */ 
+    &__date {
+        width: 100%;
+        @include flex
+        @include direction(column)
+        @include align (center)
+        @include justify (center)
+    }
+    &__date-back {
+        width: $section-w;
+        @include flex
+        @include direction(column)
+        @include align (center)
+        @include justify (center)
+    }
+    &__date-title {
+        padding-top: $paddng-top;
+        @extend %h3-teitle;
+    }
+    &__calender{
+    width: 60vw;
+    padding-top: 30px;
+    padding-bottom: 240px;
+    position: relative;
+    }
+    &__img1 ,
+    &__img2 ,
+    &__img3 {
+        width: 60vw;
+        position: absolute;
+        z-index: 5;
+    }
+}
+/*------------------------product------------------------*/
+.product {
+    width: 100%;
+    background-color: $product-color;
+    @include flex
+    @include direction(column)
+    @include align (center)
+    @include justify (center)
+        &__back {
+            width: $section-w;
+            @include flex
+            @include direction(column)
+            @include align (center)
+            @include justify (center)
+        }
+        &__title {
+            padding-top: $paddng-top;
+            @extend %h2-title;
+        }
+        &__sp-img {
+            padding : 30px 0 $paddng-top;
+            width: 90vw;
+        }
+        &__cute__title ,
+        &__fine__title ,
+        &__decorate__title {
+            padding-bottom: 20px;
+            @extend %h3-teitle;
+        }
+        &__cute__text ,
+        &__fine__text ,
+        &__decorate__text {
+            padding-bottom: 30px;
+            @extend %p-text;
+        }
+        &__decorate__text {
+            padding-bottom: $paddng-bottom;
+        }
+}
+/*------------------------vase------------------------*/
+.vase {
+    width: 100%;
+    background-color: $vase-color;
+    @include flex
+    @include direction(column)
+    @include align (center)
+    @include justify (center)
+        &__back {
+            width: $section-w;
+            @include flex
+            @include direction(column)
+            @include align (center)
+            @include justify (center)
+        }
+        &__title {
+            text-align: center;
+            padding-top: $paddng-top;
+            @extend %h2-title;
+        }
+        &__off-pop {
+            font-weight: bold;
+            padding: 5px;
+            background-color: $white;
+            margin-top: 15px;
+            @extend %p-text;
+        }
+        &__sp-img {
+            width: 100vw;
+        }
+        &__text {
+            padding-top: 30px;
+            @extend %p-text;
+        }
+        &__type {
+            width: $section-w;
+            padding-top: 30px;
+            @include flex
+            @include direction(column)
+            @include align (center)
+            @include justify (center)
+        }
+        &__type__img ,
+        &__type__text {
+            width: $section-w;
+            @include flex
+            @include direction(row)
+            @include align (center)
+            @include justify (center)
+        }
+        &__img {
+            width: 28vw;
+        }
+        &__type__text {
+            font-weight: bold;
+            position: relative;
+            top: -12px;
+            @extend %p-text;
+        }
+        &__price {
+            width: $section-w;
+            @include flex
+            @include direction(row)
+            @include align (center)
+            @include justify (center)
+        }
+}
+

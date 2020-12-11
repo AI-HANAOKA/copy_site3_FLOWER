@@ -4,6 +4,49 @@ html {
   font-size: 62.5%;
 }
 
+/* hover */
+.header--opacity:active {
+  opacity: 0.6;
+}
+
+/* h2 title */
+.delivery__point1__title, .delivery__point2__title, .delivery__point3__title, .product__title, .vase__title {
+  font-size: 2.2rem;
+  font-family: 'Kosugi Maru', sans-serif;
+  letter-spacing: 0.1rem;
+  line-height: 1.5;
+}
+
+/* h3 title */
+.price-date__price-title, .price-date__date-title, .product__cute__title, .product__fine__title, .product__decorate__title {
+  font-family: 'Kosugi Maru', sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 0.01rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* p text */
+.delivery__point1__text, .delivery__point2__text, .delivery__point3__text, .price-date__once, .product__cute__text, .product__fine__text, .product__decorate__text, .vase__off-pop, .vase__text, .vase__type__text {
+  font-size: 1.4rem;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+
+/* P * text */
+.header__caution, .price-date__shipping, .price-date__taxes {
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+}
+
+/* ------------------------共通スタイル------------------------ */
+/* img */
+.app-img,
+.google-img {
+  width: 40vw;
+}
+
+/* 対象外エリアアニメ */
 /*------------------------SCROLL要素 pcのみに表示------------------------*/
 .header__pc {
   display: none;
@@ -20,7 +63,7 @@ html {
   width: 100vw;
   background-image: url("../img/top_sp.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: 70% 50%;
   background-repeat: no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -52,7 +95,7 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 80px;
+  padding-top: 70px;
 }
 
 .header__link .logo-img {
@@ -62,8 +105,438 @@ html {
 .header__text {
   font-family: 'Kosugi Maru', sans-serif;
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.8rem;
   letter-spacing: .01em;
-  padding-top: 2rem;
+  padding-top: 20px;
+  padding-bottom: 400px;
+}
+
+.header__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header__link {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header .app-img,
+.header .google-img {
+  padding: 30px 5px 20px;
+}
+
+.header__caution {
+  color: #fff;
+  padding-bottom: 60px;
+}
+
+/*------------------------main------------------------*/
+.main {
+  width: 100vw;
+  color: #3F434A;
+}
+
+/*------------------------delivery------------------------*/
+.delivery {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.delivery__point1, .delivery__point2, .delivery__point3 {
+  width: 100vw;
+  background-image: url(../img/delivery1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.delivery__point2 {
+  background-image: url(../img/delivery2.jpg);
+}
+
+.delivery__point3 {
+  background-image: url(../img/delivery3.jpg);
+}
+
+.delivery__point1__back, .delivery__point2__back, .delivery__point3__back {
+  width: 85vw;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.delivery__point1__title, .delivery__point2__title, .delivery__point3__title {
+  padding: 20px 0 15px;
+}
+
+.delivery__point1__text, .delivery__point2__text, .delivery__point3__text {
+  padding-bottom: 400px;
+}
+
+/*------------------------price date------------------------*/
+/* price */
+.price-date {
+  width: 100%;
+  /* tate */
+}
+
+.price-date__price {
+  width: 100%;
+  background-color: #F5F5F5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.price-date__price-back, .price-date__free-trial {
+  width: 85vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.price-date__price-title {
+  padding-top: 50px;
+}
+
+.price-date__free-pop {
+  width: 40vw;
+  padding-top: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.price-date__free-img {
+  width: 65vw;
+  position: relative;
+  z-index: 0;
+  top: -20px;
+}
+
+.price-date__once {
+  font-family: 'Kosugi Maru', sans-serif;
+  font-size: 1.5rem;
+  color: #3F434A;
+  font-weight: bold;
+  text-align: center;
+}
+
+.price-date--em {
+  font-size: 2rem;
+}
+
+.price-date__shipping {
+  padding-top: 30px;
+}
+
+.price-date__taxes {
+  padding-top: 10px;
+  padding-bottom: 60px;
+}
+
+.price-date__date {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.price-date__date-back {
+  width: 85vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.price-date__date-title {
+  padding-top: 50px;
+}
+
+.price-date__calender {
+  width: 60vw;
+  padding-top: 30px;
+  padding-bottom: 240px;
+  position: relative;
+}
+
+.price-date__img1, .price-date__img2, .price-date__img3 {
+  width: 60vw;
+  position: absolute;
+  z-index: 5;
+}
+
+/*------------------------product------------------------*/
+.product {
+  width: 100%;
+  background-color: #EAD5DC;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.product__back {
+  width: 85vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.product__title {
+  padding-top: 50px;
+}
+
+.product__sp-img {
+  padding: 30px 0 50px;
+  width: 90vw;
+}
+
+.product__cute__title, .product__fine__title, .product__decorate__title {
+  padding-bottom: 20px;
+}
+
+.product__cute__text, .product__fine__text, .product__decorate__text {
+  padding-bottom: 30px;
+}
+
+.product__decorate__text {
+  padding-bottom: 60px;
+}
+
+/*------------------------vase------------------------*/
+.vase {
+  width: 100%;
+  background-color: #E7E3DF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.vase__back {
+  width: 85vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.vase__title {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.vase__off-pop {
+  font-weight: bold;
+  padding: 5px;
+  background-color: #fff;
+  margin-top: 15px;
+}
+
+.vase__sp-img {
+  width: 100vw;
+}
+
+.vase__text {
+  padding-top: 30px;
+}
+
+.vase__type {
+  width: 85vw;
+  padding-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.vase__type__img, .vase__type__text {
+  width: 85vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.vase__img {
+  width: 28vw;
+}
+
+.vase__type__text {
+  font-weight: bold;
+  position: relative;
+  top: -12px;
+}
+
+.vase__price {
+  width: 85vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=style.css.map */
