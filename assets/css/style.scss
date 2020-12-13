@@ -26,10 +26,10 @@ $footer-view-color: #EFDFC5;
 $footer-text-color: #86888C;
 // width
 $section-w: 85vw;
-// paddng top
-$paddng-top: 50px;
-// paddng bottom
-$paddng-bottom: 60px;
+// padding top
+$padding-top: 50px;
+// padding bottom
+$padding-bottom: 60px;
 //------------------------プレースホルダーセレクター------------------------
 /* hover */ 
 %opacity {
@@ -222,7 +222,7 @@ $paddng-bottom: 60px;
         @include justify (center)
     }
     &__price-title {
-        padding-top: $paddng-top;
+        padding-top: $padding-top;
         @extend %h3-teitle;
     }
     &__free-pop {
@@ -254,7 +254,7 @@ $paddng-bottom: 60px;
     }
     &__taxes {
         padding-top: 10px;
-        padding-bottom: $paddng-bottom;
+        padding-bottom: $padding-bottom;
         @extend %caution;
     }
 /* tate */ 
@@ -273,7 +273,7 @@ $paddng-bottom: 60px;
         @include justify (center)
     }
     &__date-title {
-        padding-top: $paddng-top;
+        padding-top: $padding-top;
         @extend %h3-teitle;
     }
     &__calender{
@@ -306,11 +306,11 @@ $paddng-bottom: 60px;
             @include justify (center)
         }
         &__title {
-            padding-top: $paddng-top;
+            padding-top: $padding-top;
             @extend %h2-title;
         }
         &__sp-img {
-            padding : 30px 0 $paddng-top;
+            padding : 30px 0 $padding-top;
             width: 90vw;
         }
         &__cute__title ,
@@ -326,7 +326,7 @@ $paddng-bottom: 60px;
             @extend %p-text;
         }
         &__decorate__text {
-            padding-bottom: $paddng-bottom;
+            padding-bottom: $padding-bottom;
         }
 }
 /*------------------------vase------------------------*/
@@ -346,7 +346,7 @@ $paddng-bottom: 60px;
         }
         &__title {
             text-align: center;
-            padding-top: $paddng-top;
+            padding-top: $padding-top;
             @extend %h2-title;
         }
         &__off-pop {
@@ -391,9 +391,102 @@ $paddng-bottom: 60px;
         &__price {
             width: $section-w;
             @include flex
+            @include direction(column)
+            @include align (flex-start)
+            @include justify (center)
+        }
+        &__top {
+            @include flex
             @include direction(row)
+            @include align (center)
+            @include justify (flex-start)
+        }
+        &__app-text {
+            font-weight: bold;
+            padding: 20px 0 $padding-bottom;
+            @extend %caution;
+        }
+        &__first-time {
+            font-weight: bold;
+            text-align: center;
+            padding: 5px;
+            border: 2px solid $gray;
+            @extend %p-text;
+        }
+        &__right {
+            margin-left: 20px;
+            @include flex
+            @include direction(column)
+            @include align (flex-start)
+            @include justify (center)
+        }
+        &__discount {
+            font-size: 2rem;
+            line-height: 1.5;
+            // font-weight: bold;
+        }
+        &__normal {
+            @extend %caution;
+        }
+}
+/*------------------------order------------------------*/
+.order {
+    width: 100%;
+    @include flex
+    @include direction(column)
+    @include align (center)
+    @include justify (center)
+        &__title {
+            text-align: center;
+            padding-top: $padding-top;
+            @extend %h2-title;
+        }
+        &__item {
+            width: $section-w;
+        }
+        &__easy {
+            padding-top: 30px;
+        }
+        &__app ,
+        &__guaratees {
+            padding-top: 20px;
+        }
+        &__guaratees {
+            padding-bottom: $padding-bottom;
+        }
+        &__easy ,
+        &__app ,
+        &__guaratees {
+            @include flex
+            @include direction(column)
             @include align (center)
             @include justify (center)
         }
+        &__easy--jump ,
+        &__app--blinking ,
+        &__app-img ,
+        &__guaratees--rotation {
+            width: 90px;
+        }
+        &__app--blinking {
+            position: relative;
+            z-index: 2;
+            bottom: -20px;
+        }
+        &__easy__title ,
+        &__app__title ,
+        &__guaratees__title {
+            padding-bottom: 15px;
+            @extend %h3-teitle;
+        }
+        &__easy__text ,
+        &__app__text ,
+        &__guaratees__text {
+            text-align: center;
+            @extend %p-text;
+        }
 }
+/*------------------------footer view------------------------*/
+
+
 

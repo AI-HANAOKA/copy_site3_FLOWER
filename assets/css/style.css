@@ -10,7 +10,7 @@ html {
 }
 
 /* h2 title */
-.delivery__point1__title, .delivery__point2__title, .delivery__point3__title, .product__title, .vase__title {
+.delivery__point1__title, .delivery__point2__title, .delivery__point3__title, .product__title, .vase__title, .order__title {
   font-size: 2.2rem;
   font-family: 'Kosugi Maru', sans-serif;
   letter-spacing: 0.1rem;
@@ -18,7 +18,7 @@ html {
 }
 
 /* h3 title */
-.price-date__price-title, .price-date__date-title, .product__cute__title, .product__fine__title, .product__decorate__title {
+.price-date__price-title, .price-date__date-title, .product__cute__title, .product__fine__title, .product__decorate__title, .order__easy__title, .order__app__title, .order__guaratees__title {
   font-family: 'Kosugi Maru', sans-serif;
   font-size: 1.8rem;
   letter-spacing: 0.01rem;
@@ -27,14 +27,14 @@ html {
 }
 
 /* p text */
-.delivery__point1__text, .delivery__point2__text, .delivery__point3__text, .price-date__once, .product__cute__text, .product__fine__text, .product__decorate__text, .vase__off-pop, .vase__text, .vase__type__text {
+.delivery__point1__text, .delivery__point2__text, .delivery__point3__text, .price-date__once, .product__cute__text, .product__fine__text, .product__decorate__text, .vase__off-pop, .vase__text, .vase__type__text, .vase__first-time, .order__easy__text, .order__app__text, .order__guaratees__text {
   font-size: 1.4rem;
   letter-spacing: 0.02em;
   line-height: 1.5;
 }
 
 /* P * text */
-.header__caution, .price-date__shipping, .price-date__taxes {
+.header__caution, .price-date__shipping, .price-date__taxes, .vase__app-text, .vase__normal {
   font-size: 1.2rem;
   letter-spacing: 0.1rem;
 }
@@ -528,6 +528,22 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.vase__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -535,8 +551,117 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.vase__app-text {
+  font-weight: bold;
+  padding: 20px 0 60px;
+}
+
+.vase__first-time {
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+  border: 2px solid #3F434A;
+}
+
+.vase__right {
+  margin-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
+
+.vase__discount {
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+/*------------------------order------------------------*/
+.order {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.order__title {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.order__item {
+  width: 85vw;
+}
+
+.order__easy {
+  padding-top: 30px;
+}
+
+.order__app, .order__guaratees {
+  padding-top: 20px;
+}
+
+.order__guaratees {
+  padding-bottom: 60px;
+}
+
+.order__easy, .order__app, .order__guaratees {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.order__easy--jump, .order__app--blinking, .order__app-img, .order__guaratees--rotation {
+  width: 90px;
+}
+
+.order__app--blinking {
+  position: relative;
+  z-index: 2;
+  bottom: -20px;
+}
+
+.order__easy__title, .order__app__title, .order__guaratees__title {
+  padding-bottom: 15px;
+}
+
+.order__easy__text, .order__app__text, .order__guaratees__text {
+  text-align: center;
+}
+
+/*------------------------footer view------------------------*/
 /*# sourceMappingURL=style.css.map */
