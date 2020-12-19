@@ -53,7 +53,14 @@ html {
   }
 }
 
-/*------------------------SCROLL要素 pcのみに表示------------------------*/
+@media screen and (min-width: 769px) {
+  .app-img,
+  .google-img {
+    width: 150px;
+  }
+}
+
+/*------------------------pcのみに表示------------------------*/
 .header__pc {
   display: none;
 }
@@ -61,6 +68,23 @@ html {
 @media screen and (min-width: 769px) {
   .header__pc {
     display: block;
+  }
+}
+
+.product__pc-img {
+  display: none;
+}
+
+@media screen and (min-width: 769px) {
+  .product__pc-img {
+    display: inline;
+  }
+}
+
+/*------------------------spのみに表示------------------------*/
+@media screen and (min-width: 769px) {
+  .product__sp-img {
+    display: none;
   }
 }
 
@@ -84,6 +108,20 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 769px) {
+  .header {
+    height: 100vh;
+    background-image: url("../img/top_pc.jpg");
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .header__top {
@@ -114,6 +152,12 @@ html {
   }
 }
 
+@media screen and (min-width: 769px) {
+  .header__logo-link .logo-img {
+    width: 15rem;
+  }
+}
+
 .header__text {
   font-family: 'Kosugi Maru', sans-serif;
   color: #fff;
@@ -127,6 +171,212 @@ html {
   .header__text {
     font-size: 2rem;
     padding-bottom: 500px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .header__text {
+    font-size: 2rem;
+    padding-bottom: 100px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .header__pc {
+    width: 5vw;
+    color: #fff;
+    margin-left: 4rem;
+    padding-bottom: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .header__scroll-text {
+    font-family: 'Kosugi Maru', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+    -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+    padding-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .header__scroll-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .header--blink1 {
+    font-size: 1.2rem;
+    padding-bottom: 0.3rem;
+    -webkit-animation: blink1 ease-in-out 5s infinite;
+            animation: blink1 ease-in-out 5s infinite;
+  }
+}
+
+@-webkit-keyframes blink1 {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink1 {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .header--blink2 {
+    font-size: 2rem;
+    padding-bottom: 0.3rem;
+    -webkit-animation: blink2 ease-in-out 5s infinite;
+            animation: blink2 ease-in-out 5s infinite;
+  }
+}
+
+@-webkit-keyframes blink2 {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink2 {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .header--blink3 {
+    width: 4rem;
+    -webkit-animation: blink3 ease-in-out 5s infinite;
+            animation: blink3 ease-in-out 5s infinite;
+  }
+}
+
+@-webkit-keyframes blink3 {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  85% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  92% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink3 {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  85% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  92% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .header__bottom {
+    padding-top: 50px;
+    margin-bottom: 50px;
   }
 }
 
@@ -144,6 +394,24 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media screen and (min-width: 769px) {
+  .header__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
 }
 
 .header__link {
@@ -166,6 +434,19 @@ html {
 .header .app-img,
 .header .google-img {
   padding: 30px 5px 20px;
+}
+
+@media screen and (min-width: 769px) {
+  .header .app-img,
+  .header .google-img {
+    padding: 30px 10px 20px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .header--opacity:hover {
+    opacity: 0.7;
+  }
 }
 
 .header__caution {
@@ -216,6 +497,24 @@ html {
           justify-content: center;
 }
 
+@media screen and (min-width: 769px) {
+  .delivery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .delivery__point1, .delivery__point2, .delivery__point3 {
   width: 100vw;
   background-image: url(../img/delivery1.jpg);
@@ -243,6 +542,17 @@ html {
   }
 }
 
+@media screen and (min-width: 769px) {
+  .delivery__point1, .delivery__point2, .delivery__point3 {
+    padding-bottom: 500px;
+    background-size: cover;
+    background-position: center bottom;
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+  }
+}
+
 .delivery__point2 {
   background-image: url(../img/delivery2.jpg);
 }
@@ -267,6 +577,12 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media screen and (min-width: 769px) {
+  .delivery__point1__back, .delivery__point2__back, .delivery__point3__back {
+    width: 29vw;
+  }
 }
 
 .delivery__point1__title, .delivery__point2__title, .delivery__point3__title {
@@ -297,6 +613,24 @@ html {
   /* date */
 }
 
+@media screen and (min-width: 769px) {
+  .price-date {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .price-date__price {
   width: 100vw;
   background-color: #F5F5F5;
@@ -313,6 +647,12 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media screen and (min-width: 769px) {
+  .price-date__price {
+    width: 50vw;
+  }
 }
 
 .price-date__price-back, .price-date__free-trial {
@@ -335,6 +675,12 @@ html {
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .price-date__price-back, .price-date__free-trial {
     width: 70vw;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .price-date__price-back, .price-date__free-trial {
+    width: 43vw;
   }
 }
 
@@ -361,6 +707,12 @@ html {
   }
 }
 
+@media screen and (min-width: 769px) {
+  .price-date__free-pop {
+    width: 10rem;
+  }
+}
+
 .price-date__free-img {
   width: 65vw;
   position: relative;
@@ -371,6 +723,12 @@ html {
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .price-date__free-img {
     width: 35vw;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .price-date__free-img {
+    width: 15rem;
   }
 }
 
@@ -430,6 +788,12 @@ html {
           justify-content: center;
 }
 
+@media screen and (min-width: 769px) {
+  .price-date__date {
+    width: 50vw;
+  }
+}
+
 .price-date__date-back {
   width: 85vw;
   display: -webkit-box;
@@ -453,6 +817,12 @@ html {
   }
 }
 
+@media screen and (min-width: 769px) {
+  .price-date__date-back {
+    width: 43vw;
+  }
+}
+
 .price-date__date-title {
   padding-top: 50px;
 }
@@ -460,6 +830,12 @@ html {
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .price-date__date-title {
     font-size: 2.2rem;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .price-date__date-title {
+    padding-bottom: 30px;
   }
 }
 
@@ -477,6 +853,22 @@ html {
   }
 }
 
+@media screen and (min-width: 769px) {
+  .price-date__calender {
+    width: 43vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .price-date__img1, .price-date__img2, .price-date__img3 {
   width: 60vw;
   position: absolute;
@@ -486,6 +878,12 @@ html {
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .price-date__img1, .price-date__img2, .price-date__img3 {
     width: 35vw;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .price-date__img1, .price-date__img2, .price-date__img3 {
+    width: 19rem;
   }
 }
 
@@ -549,6 +947,22 @@ html {
           justify-content: center;
 }
 
+@media screen and (min-width: 769px) {
+  .product {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+.product__pc-img {
+  width: 41vw;
+  margin-left: 2rem;
+}
+
 .product__back {
   width: 85vw;
   display: -webkit-box;
@@ -572,6 +986,14 @@ html {
   }
 }
 
+@media screen and (min-width: 769px) {
+  .product__back {
+    width: 41vw;
+    padding: 50px 0 60px;
+    margin-right: 2rem;
+  }
+}
+
 .product__title {
   padding-top: 50px;
 }
@@ -579,6 +1001,12 @@ html {
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .product__title {
     font-size: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .product__title {
+    padding-bottom: 6rem;
   }
 }
 
@@ -1148,6 +1576,12 @@ html {
   }
 }
 
+@media screen and (min-width: 769px) {
+  .footer-view__logo {
+    width: 15vw;
+  }
+}
+
 .footer-view__text {
   font-family: 'Kosugi Maru', sans-serif;
   font-weight: bold;
@@ -1168,6 +1602,12 @@ html {
 .footer-view .app-img,
 .footer-view .google-img {
   padding: 0px 5px;
+}
+
+@media screen and (min-width: 769px) {
+  .footer-view--opacity:hover {
+    opacity: 0.7;
+  }
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
@@ -1277,7 +1717,7 @@ html {
   background-position: center;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   .footer--flower:hover::after {
     background-image: url(../img/flower_icon.png);
     background-size: contain;
@@ -1291,6 +1731,13 @@ html {
   font-size: 1.2rem;
   font-weight: bold;
   padding-bottom: 60px;
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .footer__text {
+    font-size: 1.5rem;
+    text-align: center;
+  }
 }
 
 .instagram-img {
