@@ -52,7 +52,6 @@ $padding-bottom: 60px;
     line-height: 1.5;
     text-align: center;
 }
-
 /* p text */ 
 %p-text {
     font-size: 1.4rem;
@@ -72,14 +71,30 @@ $padding-bottom: 60px;
     @media screen and (min-width: 481px) and (max-width: 768px) {
         width: 30vw;
     }
+    @media screen and (min-width:769px) {
+        width: 150px;
+    }
 }
-/*------------------------SCROLL要素 pcのみに表示------------------------*/
+/*------------------------pcのみに表示------------------------*/
 .header__pc {
     display: none;
     @media screen and (min-width: 769px) {
         display: block;
     }
 }
+.product__pc-img {
+    display: none;
+    @media screen and (min-width: 769px) {
+        display: inline;
+    }
+}
+/*------------------------spのみに表示------------------------*/
+.product__sp-img {
+    @media screen and (min-width: 769px) {
+        display: none;
+    }
+}
+
 /*------------------------header------------------------*/
 .header {
     width: 100vw;
@@ -91,6 +106,16 @@ $padding-bottom: 60px;
     @include direction(column)
     @include align (center)
     @include justify (center)
+                font-size: 2rem;
+    @media screen and (min-width:769px) {
+        height: 100vh;
+        background-image: url("../img/top_pc.jpg");
+        background-size: cover;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        @include justify (space-between)
+
+    }
     // header top
         &__top {
             width: 100vw;
@@ -106,6 +131,9 @@ $padding-bottom: 60px;
                 @media screen and (min-width: 481px) and (max-width: 768px) {
                     width: 25vw;
                 }
+                @media screen and (min-width:769px) {
+                    width: 15rem;
+                }
             }
         }
         &__text {
@@ -118,15 +146,101 @@ $padding-bottom: 60px;
             @media screen and (min-width: 481px) and (max-width: 768px) {
                 font-size: 2rem;
                 padding-bottom: 500px;
-
+            }
+            @media screen and (min-width:769px) {
+                font-size: 2rem;
+                padding-bottom: 100px;
             }
         }
+        // header__pc
+        &__pc {
+            @media screen and (min-width:769px) {
+                width: 5vw;
+                color: $white;
+                margin-left: 4rem;
+                padding-bottom: 100px;
+                @include flex
+                @include direction(column)
+                @include align (center)
+                @include justify (center)
+            }
+        }
+        &__scroll-text {
+            @media screen and (min-width:769px) {
+                font-family: 'Kosugi Maru', sans-serif;
+                font-size: 2rem;
+                letter-spacing: 0.2rem;
+                writing-mode: vertical-rl;
+                padding-bottom: 1rem;
+            }
+        }
+        &__scroll-item {
+            @media screen and (min-width:769px) {
+                @include flex
+                @include direction(column)
+                @include align (center)
+                @include justify (center)
+            }
+        }
+        &--blink1 {
+            @media screen and (min-width:769px) {
+                font-size: 1.2rem;
+                padding-bottom: 0.3rem;
+                animation: blink1 ease-in-out 5s infinite;
+            }
+        @keyframes blink1 {
+            0% {opacity: 0;}
+            20% {opacity: 0;}
+            30% {opacity: 1;}
+            100% {opacity: 1;}
+        }
+        }
+        &--blink2 {
+            @media screen and (min-width:769px) {
+                font-size: 2rem;
+                padding-bottom: 0.3rem;
+                animation: blink2 ease-in-out 5s infinite;
+            }
+        @keyframes blink2 {
+            0% {opacity: 0;}
+            40% {opacity: 0;}
+            50% {opacity: 1;}
+            100% {opacity: 1;}
+        }
+        }
+        &--blink3 {
+            @media screen and (min-width:769px) {
+                width: 4rem;
+                animation: blink3 ease-in-out 5s infinite;
+            }
+        @keyframes blink3 {
+            0% {opacity: 0;}
+            60% {opacity: 0;}
+            70% {opacity: 1;}
+            80% {transform: rotate(0deg);}
+            85% {transform: rotate(360deg);}
+            92% {transform: rotate(0deg);}
+            100% {opacity: 1;}
+        }
+        }
         // header bottom
+        &__bottom {
+            @media screen and (min-width:769px) {
+                padding-top: 50px;
+                margin-bottom: 50px;
+            }
+        }
         &__item {
             @include flex
             @include direction(column)
             @include align (center)
             @include justify (center)
+            @media screen and (min-width:769px) {
+                @include flex
+                @include direction(column)
+                @include align (center)
+                @include justify (flex-end)
+            }
         }
         &__link {
             width: 100vw;
@@ -141,7 +255,18 @@ $padding-bottom: 60px;
             .app-img ,
             .google-img {
                 padding: 30px 5px 20px ;
+                @media screen and (min-width:769px) {
+                    padding: 30px 10px 20px ;
+                }
+                
             }
+        &--opacity {
+            &:hover {
+                @media screen and (min-width:769px) {
+                    opacity: 0.7;
+                }
+            }
+        }
         &__caution {
             color: $white;
             padding-bottom: 60px;
@@ -167,6 +292,12 @@ $padding-bottom: 60px;
     @include direction(column)
     @include align (center)
     @include justify (center)
+    @media screen and (min-width:769px) {
+        @include flex
+        @include direction(row)
+        @include align (flex-start)
+        @include justify (center)
+    }
         &__point1 ,
         &__point2 ,
         &__point3 {
@@ -181,6 +312,12 @@ $padding-bottom: 60px;
             @include justify (center)
             @media screen and (min-width: 481px) and (max-width: 768px) {
                 background-position: 50% 75%;
+            }
+            @media screen and (min-width:769px) {
+                padding-bottom: 500px;
+                background-size: cover;
+                background-position: center bottom;
+                align-self: stretch;
 
             }
         }
@@ -199,6 +336,9 @@ $padding-bottom: 60px;
             @include direction(column)
             @include align (flex-start)
             @include justify (center)
+            @media screen and (min-width:769px) {
+                width: ceil($section-w / 3);
+            }
         }
         &__point1__title ,
         &__point2__title ,
@@ -224,6 +364,12 @@ $padding-bottom: 60px;
 /* price */ 
 .price-date {
     width: 100vw;
+    @media screen and (min-width:769px) {
+        @include flex
+        @include direction(row)
+        @include align (center)
+        @include justify (center)
+    }
     &__price {
         width: 100vw;
         background-color: $price-color;
@@ -231,7 +377,10 @@ $padding-bottom: 60px;
         @include direction(column)
         @include align (center)
         @include justify (center)
+        @media screen and (min-width:769px) {
+            width: ceil(100vw / 2);
         }
+    }
     &__price-back ,
     &__free-trial {
         width: $section-w;
@@ -241,6 +390,9 @@ $padding-bottom: 60px;
         @include justify (center)
         @media screen and (min-width: 481px) and (max-width: 768px) {
             width: $responsive-m;
+        }
+        @media screen and (min-width:769px) {
+            width: ceil($section-w / 2);
         }
     }
     &__price-title {
@@ -258,6 +410,9 @@ $padding-bottom: 60px;
         @media screen and (min-width: 481px) and (max-width: 768px) {
             width: 20vw;
         }
+        @media screen and (min-width:769px) {
+            width: 10rem;
+        }
     }
     &__free-img {
         width: 65vw;
@@ -266,6 +421,9 @@ $padding-bottom: 60px;
         top: -20px;
         @media screen and (min-width: 481px) and (max-width: 768px) {
             width: 35vw;
+        }
+        @media screen and (min-width:769px) {
+            width: 15rem;
         }
     }
     &__once {
@@ -304,6 +462,9 @@ $padding-bottom: 60px;
         @include direction(column)
         @include align (center)
         @include justify (center)
+        @media screen and (min-width:769px) {
+            width: ceil(100vw / 2);
+        }
     }
     &__date-back {
         width: $section-w;
@@ -314,6 +475,9 @@ $padding-bottom: 60px;
         @media screen and (min-width: 481px) and (max-width: 768px) {
             width: $responsive-m;
         }
+        @media screen and (min-width:769px) {
+            width: ceil($section-w / 2);
+        }
     }
     &__date-title {
         padding-top: $padding-top;
@@ -321,17 +485,25 @@ $padding-bottom: 60px;
         @media screen and (min-width: 481px) and (max-width: 768px) {
             font-size: 2.2rem;
         }
+        @media screen and (min-width:769px) {
+            padding-bottom: 30px;
+        }
     }
     &__calender{
-    width: 60vw;
-    padding-top: 30px;
-    padding-bottom: 240px;
-    position: relative;
-    @media screen and (min-width: 481px) and (max-width: 768px) {
-        width: 35vw;
-        padding-bottom: 270px;
-
-    }
+        width: 60vw;
+        padding-top: 30px;
+        padding-bottom: 240px;
+        position: relative;
+        @media screen and (min-width: 481px) and (max-width: 768px) {
+            width: 35vw;
+            padding-bottom: 270px;
+        }
+        @media screen and (min-width:769px) {
+            width: ceil($section-w / 2);
+            @include flex
+            @include direction(column)
+            @include align (center)
+        }
     }
     &__img1 ,
     &__img2 ,
@@ -341,6 +513,9 @@ $padding-bottom: 60px;
         z-index: 5;
         @media screen and (min-width: 481px) and (max-width: 768px) {
             width: 35vw;
+        }
+        @media screen and (min-width:769px) {
+            width: 19rem;
         }
     }
     &__img2 ,
@@ -363,6 +538,15 @@ $padding-bottom: 60px;
     @include direction(column)
     @include align (center)
     @include justify (center)
+    @media screen and (min-width:769px) {
+        @include direction(row)
+        @include justify (space-around)
+
+    }
+        &__pc-img {
+            width: ceil($section-w / 2.1);
+            margin-left: 2rem;
+        }
         &__back {
             width: $section-w;
             @include flex
@@ -372,12 +556,21 @@ $padding-bottom: 60px;
             @media screen and (min-width: 481px) and (max-width: 768px) {
                 width: $responsive-m;
             }
+            @media screen and (min-width:769px) {
+                width: ceil($section-w / 2.1);
+                padding: $padding-top 0 $padding-bottom;
+                margin-right: 2rem;
+
+            }
         }
         &__title {
             padding-top: $padding-top;
             @extend %h2-title;
             @media screen and (min-width: 481px) and (max-width: 768px) {
                 font-size: 2.5rem;
+            }
+            @media screen and (min-width:769px) {
+                padding-bottom: 6rem;
             }
         }
         &__sp-img {
@@ -679,6 +872,9 @@ $padding-bottom: 60px;
             @media screen and (min-width: 481px) and (max-width: 768px) {
                 width: 25vw;
             }
+            @media screen and (min-width:769px) {
+                width: 15vw;
+            }
         }
         &__text {
             font-family: 'Kosugi Maru', sans-serif;
@@ -688,7 +884,6 @@ $padding-bottom: 60px;
             @media screen and (min-width: 481px) and (max-width: 768px) {
                 font-size: 1.8rem;
                 padding-bottom: 40px;
-
             }
         }
         &__link {
@@ -701,11 +896,19 @@ $padding-bottom: 60px;
         .google-img {
             padding: 0px 5px;
         }
+        &--opacity {
+            &:hover {
+                @media screen and (min-width:769px) {
+                    opacity: 0.7;
+                }
+            }
+        }
         &__caution {
             @extend %caution;
             @media screen and (min-width: 481px) and (max-width: 768px) {
                 font-size: 1.5rem;
             }
+
         }
         &__img {
             width: 100vw;
@@ -767,7 +970,7 @@ $padding-bottom: 60px;
             background-repeat: no-repeat;
             background-position: center;
         }
-        @media screen and (min-width:769px) {
+        @media screen and (min-width:768px) {
             &--flower:hover::after {
                 background-image: url(../img/flower_icon.png);
                 background-size: contain;
@@ -780,7 +983,10 @@ $padding-bottom: 60px;
             font-size: 1.2rem;
             font-weight: bold;
             padding-bottom: $padding-bottom;
-            
+            @media screen and (min-width: 481px) and (max-width: 768px) {
+                font-size: 1.5rem;
+                text-align: center;
+            }
         }
     }
 .instagram-img {
