@@ -30,8 +30,10 @@ $section-w: 85vw;
 $responsive-m: 70vw;
 // padding top
 $padding-top: 50px;
+$padding-top-pc: 70px;
 // padding bottom
 $padding-bottom: 60px;
+$padding-bottom-pc: 80px;
 //------------------------プレースホルダーセレクター------------------------
 /* hover */ 
 %opacity {
@@ -69,10 +71,10 @@ $padding-bottom: 60px;
 .google-img {
     width: 40vw;
     @media screen and (min-width: 481px) and (max-width: 768px) {
-        width: 30vw;
+        width: 150px;
     }
     @media screen and (min-width:769px) {
-        width: 150px;
+        width: 170px;
     }
 }
 /*------------------------pcのみに表示------------------------*/
@@ -82,14 +84,16 @@ $padding-bottom: 60px;
         display: block;
     }
 }
-.product__pc-img {
+.product__pc-img ,
+.vase__pc-img {
     display: none;
     @media screen and (min-width: 769px) {
         display: inline;
     }
 }
 /*------------------------spのみに表示------------------------*/
-.product__sp-img {
+.product__sp-img ,
+.vase__sp-img{
     @media screen and (min-width: 769px) {
         display: none;
     }
@@ -106,7 +110,7 @@ $padding-bottom: 60px;
     @include direction(column)
     @include align (center)
     @include justify (center)
-                font-size: 2rem;
+
     @media screen and (min-width:769px) {
         height: 100vh;
         background-image: url("../img/top_pc.jpg");
@@ -114,7 +118,6 @@ $padding-bottom: 60px;
         background-position: center bottom;
         background-repeat: no-repeat;
         @include justify (space-between)
-
     }
     // header top
         &__top {
@@ -258,7 +261,6 @@ $padding-bottom: 60px;
                 @media screen and (min-width:769px) {
                     padding: 30px 10px 20px ;
                 }
-                
             }
         &--opacity {
             &:hover {
@@ -273,6 +275,11 @@ $padding-bottom: 60px;
             @extend %caution;
             @media screen and (min-width: 481px) and (max-width: 768px) {
                 font-size: 1.5rem;
+                padding-bottom: 80px;
+            }
+            @media screen and (min-width:769px) {
+                font-size: 1.5rem;
+                padding-bottom: 30px;
             }
         }
 }
@@ -314,11 +321,10 @@ $padding-bottom: 60px;
                 background-position: 50% 75%;
             }
             @media screen and (min-width:769px) {
-                padding-bottom: 500px;
+                padding-bottom: 300px;
                 background-size: cover;
                 background-position: center bottom;
                 align-self: stretch;
-
             }
         }
         &__point2 {
@@ -348,6 +354,10 @@ $padding-bottom: 60px;
             @media screen and (min-width: 481px) and (max-width: 768px) {
                 font-size: 2.5rem;
             }
+            @media screen and (min-width:769px) {
+                font-size: 2.5rem;
+                padding: 100px 0 30px;
+            }
         }
         &__point1__text ,
         &__point2__text ,
@@ -357,6 +367,9 @@ $padding-bottom: 60px;
             @media screen and (min-width: 481px) and (max-width: 768px) {
                 font-size: 1.8rem;
                 padding-bottom: 500px;
+            }
+            @media screen and (min-width:769px) {
+                font-size: 1.8rem;
             }
         }
 }
@@ -380,6 +393,9 @@ $padding-bottom: 60px;
         @media screen and (min-width:769px) {
             width: ceil(100vw / 2);
         }
+        @media screen and (min-width:769px) {
+            padding-top: $padding-top-pc;
+        }
     }
     &__price-back ,
     &__free-trial {
@@ -401,6 +417,10 @@ $padding-bottom: 60px;
         @media screen and (min-width: 481px) and (max-width: 768px) {
             font-size: 2.2rem;
         }
+        @media screen and (min-width:769px) {
+            font-size: 2.2rem;
+            padding-bottom: 30px;
+        }
     }
     &__free-pop {
         width: 40vw;
@@ -411,7 +431,7 @@ $padding-bottom: 60px;
             width: 20vw;
         }
         @media screen and (min-width:769px) {
-            width: 10rem;
+            width: 12rem;
         }
     }
     &__free-img {
@@ -423,7 +443,7 @@ $padding-bottom: 60px;
             width: 35vw;
         }
         @media screen and (min-width:769px) {
-            width: 15rem;
+            width: 20rem;
         }
     }
     &__once {
@@ -436,6 +456,9 @@ $padding-bottom: 60px;
         @media screen and (min-width: 481px) and (max-width: 768px) {
             font-size: 1.8rem;
         }
+        @media screen and (min-width:769px) {
+            font-size: 1.8rem;
+        }
     }
     &--em {
         font-size: 2rem;
@@ -446,6 +469,9 @@ $padding-bottom: 60px;
         @media screen and (min-width: 481px) and (max-width: 768px) {
             font-size: 1.5rem;
         }
+        @media screen and (min-width:769px) {
+            font-size: 1.5rem;
+        }
     }
     &__taxes {
         padding-top: 10px;
@@ -453,6 +479,10 @@ $padding-bottom: 60px;
         @extend %caution;
         @media screen and (min-width: 481px) and (max-width: 768px) {
             font-size: 1.5rem;
+        }
+        @media screen and (min-width:769px) {
+            font-size: 1.5rem;
+            padding-bottom: $padding-bottom-pc;
         }
     }
 /* date */ 
@@ -486,6 +516,7 @@ $padding-bottom: 60px;
             font-size: 2.2rem;
         }
         @media screen and (min-width:769px) {
+            font-size: 2.2rem;
             padding-bottom: 30px;
         }
     }
@@ -539,15 +570,17 @@ $padding-bottom: 60px;
     @include align (center)
     @include justify (center)
     @media screen and (min-width:769px) {
+        @include flex
         @include direction(row)
+        @include align (center)
         @include justify (space-around)
-
     }
         &__pc-img {
             width: ceil($section-w / 2.1);
             margin-left: 2rem;
         }
-        &__back {
+        &__back ,
+        &__back-pc {
             width: $section-w;
             @include flex
             @include direction(column)
@@ -560,7 +593,11 @@ $padding-bottom: 60px;
                 width: ceil($section-w / 2.1);
                 padding: $padding-top 0 $padding-bottom;
                 margin-right: 2rem;
-
+            }
+        }
+        &__back-pc {
+            @media screen and (min-width:769px) {
+                width: 40rem;
             }
         }
         &__title {
@@ -570,7 +607,8 @@ $padding-bottom: 60px;
                 font-size: 2.5rem;
             }
             @media screen and (min-width:769px) {
-                padding-bottom: 6rem;
+                font-size: 2.5rem;
+                padding: $padding-top-pc 0 80px;
             }
         }
         &__sp-img {
@@ -588,6 +626,9 @@ $padding-bottom: 60px;
             @media screen and (min-width: 481px) and (max-width: 768px) {
                 font-size: 2.2rem;
             }
+            @media screen and (min-width:769px) {
+                font-size: 2.2rem;
+            }
         }
         &__cute__text ,
         &__fine__text ,
@@ -596,6 +637,10 @@ $padding-bottom: 60px;
             @extend %p-text;
             @media screen and (min-width: 481px) and (max-width: 768px) {
                 font-size: 1.8rem;
+            }
+            @media screen and (min-width:769px) {
+                font-size: 1.8rem;
+                padding-bottom: 40px;
             }
         }
         &__decorate__text {
@@ -610,7 +655,14 @@ $padding-bottom: 60px;
     @include direction(column)
     @include align (center)
     @include justify (center)
-        &__back {
+    @media screen and (min-width:769px) {
+        @include flex
+        @include direction(row)
+        @include align (center)
+        @include justify (flex-end)
+    }
+        &__back ,
+        &__back-pc {
             width: $section-w;
             @include flex
             @include direction(column)
@@ -619,6 +671,21 @@ $padding-bottom: 60px;
             @media screen and (min-width: 481px) and (max-width: 768px) {
                 width: $responsive-m;
             }
+            @media screen and (min-width:769px) {
+                width: 40%;
+                @include flex
+                @include direction(column)
+                @include align (space-between)
+                @include justify (center)
+            }
+        }
+        &__back-pc {
+            @media screen and (min-width:769px) {
+                width: 40rem;
+            }
+        }
+        &__pc-img {
+                width: 45vw;
         }
         &__title {
             text-align: center;
@@ -626,6 +693,10 @@ $padding-bottom: 60px;
             @extend %h2-title;
             @media screen and (min-width: 481px) and (max-width: 768px) {
                 font-size: 2.5rem;
+            }
+            @media screen and (min-width:769px) {
+                font-size: 2.5rem;
+                padding-top: $padding-top-pc;
             }
         }
         &__off-pop {
@@ -635,6 +706,9 @@ $padding-bottom: 60px;
             margin-top: 15px;
             @extend %p-text;
             @media screen and (min-width: 481px) and (max-width: 768px) {
+                font-size: 1.8rem;
+            }
+            @media screen and (min-width:769px) {
                 font-size: 1.8rem;
             }
         }
@@ -650,6 +724,11 @@ $padding-bottom: 60px;
             @media screen and (min-width: 481px) and (max-width: 768px) {
                 font-size: 1.8rem;
             }
+            @media screen and (min-width:769px) {
+                font-size: 1.8rem;
+                width: 100%;
+                padding-top: 10rem;
+            }
         }
         &__type {
             width: $section-w;
@@ -661,6 +740,13 @@ $padding-bottom: 60px;
             @media screen and (min-width: 481px) and (max-width: 768px) {
                 width: $responsive-m;
             }
+            @media screen and (min-width:769px) {
+                width: 40rem;
+                @include flex
+                @include direction(row)
+                @include align (center)
+                @include justify (space-between)
+            }
         }
         &__type__img {
             width: $section-w;
@@ -671,12 +757,18 @@ $padding-bottom: 60px;
             @media screen and (min-width: 481px) and (max-width: 768px) {
                 width: $responsive-m;
             }
+            @media screen and (min-width:769px) {
+                width: 10rem;
+            }
         }
         &__img {
             width: 28vw;
             @media screen and (min-width: 481px) and (max-width: 768px) {
                 width: 20vw;
                 margin: 0px 15px;
+            }
+            @media screen and (min-width:769px) {
+                width: 10rem;
             }
         }
         &__type__text {
@@ -685,10 +777,13 @@ $padding-bottom: 60px;
             position: relative;
             top: -25px;
             @extend %p-text;
-            // @media screen and (min-width: 481px) and (max-width: 768px) {
-            //     font-size: 1.8rem;
-            //     margin: 0px 30px;
-            // }
+            @media screen and (min-width: 481px) and (max-width: 768px) {
+                font-size: 1.8rem;
+                margin: 0px 30px;
+            }
+            @media screen and (min-width:769px) {
+                font-size: 1.8rem;
+            }
         }
         &__price {
             width: $section-w;
@@ -699,6 +794,9 @@ $padding-bottom: 60px;
             @media screen and (min-width: 481px) and (max-width: 768px) {
                 width: $responsive-m;
             }
+            @media screen and (min-width:769px) {
+                width: 100%;
+            }
         }
         &__top {
             @include flex
@@ -706,15 +804,6 @@ $padding-bottom: 60px;
             @include align (center)
             @include justify (flex-start)
         }
-        &__app-text {
-            font-weight: bold;
-            padding: 20px 0 $padding-bottom;
-            @extend %caution;
-            @media screen and (min-width: 481px) and (max-width: 768px) {
-                font-size: 1.5rem;
-            }
-        }
-
         &__first-time {
             font-weight: bold;
             text-align: center;
@@ -722,6 +811,9 @@ $padding-bottom: 60px;
             border: 2px solid $gray;
             @extend %p-text;
             @media screen and (min-width: 481px) and (max-width: 768px) {
+                font-size: 1.8rem;
+            }
+            @media screen and (min-width:769px) {
                 font-size: 1.8rem;
             }
         }
@@ -742,6 +834,21 @@ $padding-bottom: 60px;
             @media screen and (min-width: 481px) and (max-width: 768px) {
                 font-size: 1.5rem;
             }
+            @media screen and (min-width:769px) {
+                font-size: 1.5rem;
+            }
+        }
+        &__app-text {
+            font-weight: bold;
+            padding: 20px 0 $padding-bottom;
+            @extend %caution;
+            @media screen and (min-width: 481px) and (max-width: 768px) {
+                font-size: 1.5rem;
+            }
+            @media screen and (min-width:769px) {
+                font-size: 1.5rem;
+                padding-bottom: $padding-bottom-pc;
+            }
         }
 }
 /*------------------------order------------------------*/
@@ -758,6 +865,10 @@ $padding-bottom: 60px;
             @media screen and (min-width: 481px) and (max-width: 768px) {
                 font-size: 2.5rem;
             }
+            @media screen and (min-width:769px) {
+                font-size: 2.5rem;
+                padding-top: 100px;
+            }
         }
         &__item {
             width: $section-w;
@@ -767,6 +878,13 @@ $padding-bottom: 60px;
                 @include direction(column)
                 @include align (center)
                 @include justify (center)
+            }
+            @media screen and (min-width:769px) {
+                padding: 30px 0 150px;
+                @include flex
+                @include direction(row)
+                @include align (center)
+                @include justify (space-around)            
             }
         }
         &__item__top {
@@ -778,9 +896,21 @@ $padding-bottom: 60px;
                 @include align (flex-start)
                 @include justify (space-around)
             }
+            @media screen and (min-width:769px) {
+                width: 66%;
+                padding-top: 0px;
+                @include flex
+                @include direction(row)
+                @include align (center)
+                @include justify (space-around)            
+            }
         }
         &__guaratees {
             padding: 20px 0 $padding-bottom;
+            @media screen and (min-width:769px) {
+                width: ceil(100% / 3);
+                padding: 0px;
+            }
         }
         &__easy ,
         &__app ,
@@ -839,6 +969,10 @@ $padding-bottom: 60px;
             @media screen and (min-width: 481px) and (max-width: 768px) {
                 font-size: 2.2rem;
             }
+            @media screen and (min-width:769px) {
+                font-size: 2.2rem;
+                padding: 15px 0 20px;
+            }
         }
         &__easy__text ,
         &__app__text ,
@@ -847,6 +981,9 @@ $padding-bottom: 60px;
             @extend %p-text;
             @media screen and (min-width: 481px) and (max-width: 768px) {
                 font-size: 1.5rem;
+            }
+            @media screen and (min-width:769px) {
+                font-size: 1.8rem;
             }
         }
 }
@@ -859,12 +996,21 @@ $padding-bottom: 60px;
     @include direction(column)
     @include align (center)
     @include justify (center)
+    @media screen and (min-width:769px) {
+        @include flex
+        @include direction(row-reverse)
+        @include align (center)
+        @include justify (center)
+    }
         &__item {
             width :100vw;
             @include flex
             @include direction(column)
             @include align (center)
             @include justify (center)
+            @media screen and (min-width:769px) {
+                width: 40%;
+            }
         }
         &__logo {
             width: 35vw;
@@ -875,6 +1021,9 @@ $padding-bottom: 60px;
             @media screen and (min-width:769px) {
                 width: 15vw;
             }
+            @media screen and (min-width:769px) {
+                width: 15rem;
+            }
         }
         &__text {
             font-family: 'Kosugi Maru', sans-serif;
@@ -883,6 +1032,10 @@ $padding-bottom: 60px;
             @extend %p-text;
             @media screen and (min-width: 481px) and (max-width: 768px) {
                 font-size: 1.8rem;
+                padding-bottom: 40px;
+            }
+            @media screen and (min-width:769px) {
+                font-size: 2rem;
                 padding-bottom: 40px;
             }
         }
@@ -908,12 +1061,18 @@ $padding-bottom: 60px;
             @media screen and (min-width: 481px) and (max-width: 768px) {
                 font-size: 1.5rem;
             }
-
+            @media screen and (min-width:769px) {
+                font-size: 1.5rem;
+                padding-bottom: 40px;
+            }
         }
         &__img {
             width: 100vw;
             @media screen and (min-width: 481px) and (max-width: 768px) {
                 width: $responsive-m;
+            }
+            @media screen and (min-width:769px) {
+                width: 45%;
             }
         }
 }
@@ -932,12 +1091,31 @@ $padding-bottom: 60px;
             @include direction(row)
             @include align (flex-start)
             @include justify (space-between)
+            @media screen and (min-width:769px) {
+                padding: 40px 0 200px;
+                @include flex
+                @include direction(row)
+                @include align (center)
+                @include justify (space-between)
+
+            }
         }
         &__list {
             @include flex
             @include direction(column)
             @include align (flex-start)
             @include justify (flex-end)
+            @media screen and (min-width:769px) {
+                @include flex
+                @include direction(row)
+                @include align (center)
+                @include justify (center)
+            }
+        }
+        &__link {
+            @media screen and (min-width:769px) {
+                padding-left: 30px;
+            }
         }
         &--flower {
             color: $white;
@@ -948,7 +1126,9 @@ $padding-bottom: 60px;
             @media screen and (min-width: 481px) and (max-width: 768px) {
                 font-size: 1.8rem;
                 line-height: 2;
-
+            }
+            @media screen and (min-width:769px) {
+                font-size: 1.8rem;
             }
         }
         &--flower::after {
@@ -961,7 +1141,9 @@ $padding-bottom: 60px;
             left: -20px;
             opacity: 0.3;
             @media screen and (min-width:769px) {
-                left: -40px;
+                width: 45px;
+                height: 45px;
+                left: -22px;
             }
         }
         &--flower:active::after {
@@ -975,7 +1157,7 @@ $padding-bottom: 60px;
                 background-image: url(../img/flower_icon.png);
                 background-size: contain;
                 background-repeat: no-repeat;
-                background-position: center;
+                background-position: 50%;
             }
         }
         &__text {
@@ -995,6 +1177,7 @@ $padding-bottom: 60px;
 .instagram-img:active {
     @extend %opacity;
 }
+
 
 
 
