@@ -70,31 +70,31 @@ $padding-bottom-pc: 80px;
 .app-img ,
 .google-img {
     width: 40vw;
-    @media screen and (min-width: 481px) and (max-width: 768px) {
+    @media screen and (min-width: 481px) and (max-width: 950px) {
         width: 150px;
     }
-    @media screen and (min-width:769px) {
+    @media screen and (min-width:951px) {
         width: 170px;
     }
 }
 /*------------------------pcのみに表示------------------------*/
 .header__pc {
     display: none;
-    @media screen and (min-width: 769px) {
+    @media screen and (min-width:951px) {
         display: block;
     }
 }
 .product__pc-img ,
 .vase__pc-img {
     display: none;
-    @media screen and (min-width: 769px) {
+    @media screen and (min-width:951px) {
         display: inline;
     }
 }
 /*------------------------spのみに表示------------------------*/
 .product__sp-img ,
 .vase__sp-img{
-    @media screen and (min-width: 769px) {
+    @media screen and (min-width:951px) {
         display: none;
     }
 }
@@ -111,7 +111,7 @@ $padding-bottom-pc: 80px;
     @include align (center)
     @include justify (center)
 
-    @media screen and (min-width:769px) {
+    @media screen and (min-width:951px) {
         height: 100vh;
         background-image: url("../img/top_pc.jpg");
         background-size: cover;
@@ -131,10 +131,10 @@ $padding-bottom-pc: 80px;
         &__logo-link {
             .logo-img {
                 width: 45vw;
-                @media screen and (min-width: 481px) and (max-width: 768px) {
+                @media screen and (min-width: 481px) and (max-width: 950px) {
                     width: 25vw;
                 }
-                @media screen and (min-width:769px) {
+                @media screen and (min-width:951px) {
                     width: 15rem;
                 }
             }
@@ -146,18 +146,18 @@ $padding-bottom-pc: 80px;
             letter-spacing: .01em;
             padding-top: 20px;
             padding-bottom: 400px;
-            @media screen and (min-width: 481px) and (max-width: 768px) {
+            @media screen and (min-width: 481px) and (max-width: 950px) {
                 font-size: 2rem;
                 padding-bottom: 500px;
             }
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 font-size: 2rem;
                 padding-bottom: 100px;
             }
         }
         // header__pc
         &__pc {
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 width: 5vw;
                 color: $white;
                 margin-left: 4rem;
@@ -169,7 +169,7 @@ $padding-bottom-pc: 80px;
             }
         }
         &__scroll-text {
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 font-family: 'Kosugi Maru', sans-serif;
                 font-size: 2rem;
                 letter-spacing: 0.2rem;
@@ -178,7 +178,7 @@ $padding-bottom-pc: 80px;
             }
         }
         &__scroll-item {
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 @include flex
                 @include direction(column)
                 @include align (center)
@@ -186,7 +186,7 @@ $padding-bottom-pc: 80px;
             }
         }
         &--blink1 {
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 font-size: 1.2rem;
                 padding-bottom: 0.3rem;
                 animation: blink1 ease-in-out 5s infinite;
@@ -199,7 +199,7 @@ $padding-bottom-pc: 80px;
         }
         }
         &--blink2 {
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 font-size: 2rem;
                 padding-bottom: 0.3rem;
                 animation: blink2 ease-in-out 5s infinite;
@@ -212,7 +212,7 @@ $padding-bottom-pc: 80px;
         }
         }
         &--blink3 {
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 width: 4rem;
                 animation: blink3 ease-in-out 5s infinite;
             }
@@ -228,7 +228,7 @@ $padding-bottom-pc: 80px;
         }
         // header bottom
         &__bottom {
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 padding-top: 50px;
                 margin-bottom: 50px;
             }
@@ -238,7 +238,7 @@ $padding-bottom-pc: 80px;
             @include direction(column)
             @include align (center)
             @include justify (center)
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 @include flex
                 @include direction(column)
                 @include align (center)
@@ -258,13 +258,13 @@ $padding-bottom-pc: 80px;
             .app-img ,
             .google-img {
                 padding: 30px 5px 20px ;
-                @media screen and (min-width:769px) {
+                @media screen and (min-width:951px) {
                     padding: 30px 10px 20px ;
                 }
             }
         &--opacity {
             &:hover {
-                @media screen and (min-width:769px) {
+                @media screen and (min-width:951px) {
                     opacity: 0.7;
                 }
             }
@@ -273,11 +273,11 @@ $padding-bottom-pc: 80px;
             color: $white;
             padding-bottom: 60px;
             @extend %caution;
-            @media screen and (min-width: 481px) and (max-width: 768px) {
+            @media screen and (min-width: 481px) and (max-width: 950px) {
                 font-size: 1.5rem;
                 padding-bottom: 80px;
             }
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 font-size: 1.5rem;
                 padding-bottom: 30px;
             }
@@ -299,7 +299,7 @@ $padding-bottom-pc: 80px;
     @include direction(column)
     @include align (center)
     @include justify (center)
-    @media screen and (min-width:769px) {
+    @media screen and (min-width:951px) {
         @include flex
         @include direction(row)
         @include align (flex-start)
@@ -317,10 +317,10 @@ $padding-bottom-pc: 80px;
             @include direction(column)
             @include align (center)
             @include justify (center)
-            @media screen and (min-width: 481px) and (max-width: 768px) {
+            @media screen and (min-width: 481px) and (max-width: 950px) {
                 background-position: 50% 75%;
             }
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 padding-bottom: 300px;
                 background-size: cover;
                 background-position: center bottom;
@@ -342,7 +342,7 @@ $padding-bottom-pc: 80px;
             @include direction(column)
             @include align (flex-start)
             @include justify (center)
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 width: ceil($section-w / 3);
             }
         }
@@ -351,10 +351,10 @@ $padding-bottom-pc: 80px;
         &__point3__title {
             padding: 20px 0 15px;
             @extend %h2-title;
-            @media screen and (min-width: 481px) and (max-width: 768px) {
+            @media screen and (min-width: 481px) and (max-width: 950px) {
                 font-size: 2.5rem;
             }
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 font-size: 2.5rem;
                 padding: 100px 0 30px;
             }
@@ -364,11 +364,11 @@ $padding-bottom-pc: 80px;
         &__point3__text {
             padding-bottom: 400px;
             @extend %p-text;
-            @media screen and (min-width: 481px) and (max-width: 768px) {
+            @media screen and (min-width: 481px) and (max-width: 950px) {
                 font-size: 1.8rem;
                 padding-bottom: 500px;
             }
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 font-size: 1.8rem;
             }
         }
@@ -377,7 +377,7 @@ $padding-bottom-pc: 80px;
 /* price */ 
 .price-date {
     width: 100vw;
-    @media screen and (min-width:769px) {
+    @media screen and (min-width:951px) {
         @include flex
         @include direction(row)
         @include align (center)
@@ -390,10 +390,10 @@ $padding-bottom-pc: 80px;
         @include direction(column)
         @include align (center)
         @include justify (center)
-        @media screen and (min-width:769px) {
+        @media screen and (min-width:951px) {
             width: ceil(100vw / 2);
         }
-        @media screen and (min-width:769px) {
+        @media screen and (min-width:951px) {
             padding-top: $padding-top-pc;
         }
     }
@@ -404,20 +404,20 @@ $padding-bottom-pc: 80px;
         @include direction(column)
         @include align (center)
         @include justify (center)
-        @media screen and (min-width: 481px) and (max-width: 768px) {
+        @media screen and (min-width: 481px) and (max-width: 950px) {
             width: $responsive-m;
         }
-        @media screen and (min-width:769px) {
+        @media screen and (min-width:951px) {
             width: ceil($section-w / 2);
         }
     }
     &__price-title {
         padding-top: $padding-top;
         @extend %h3-teitle;
-        @media screen and (min-width: 481px) and (max-width: 768px) {
+        @media screen and (min-width: 481px) and (max-width: 950px) {
             font-size: 2.2rem;
         }
-        @media screen and (min-width:769px) {
+        @media screen and (min-width:951px) {
             font-size: 2.2rem;
             padding-bottom: 30px;
         }
@@ -427,10 +427,10 @@ $padding-bottom-pc: 80px;
         padding-top: 15px;
         position: relative;
         z-index: 1;
-        @media screen and (min-width: 481px) and (max-width: 768px) {
+        @media screen and (min-width: 481px) and (max-width: 950px) {
             width: 20vw;
         }
-        @media screen and (min-width:769px) {
+        @media screen and (min-width:951px) {
             width: 12rem;
         }
     }
@@ -439,10 +439,10 @@ $padding-bottom-pc: 80px;
         position: relative;
         z-index: 0;
         top: -20px;
-        @media screen and (min-width: 481px) and (max-width: 768px) {
+        @media screen and (min-width: 481px) and (max-width: 950px) {
             width: 35vw;
         }
-        @media screen and (min-width:769px) {
+        @media screen and (min-width:951px) {
             width: 20rem;
         }
     }
@@ -453,10 +453,10 @@ $padding-bottom-pc: 80px;
         font-weight: bold;
         text-align: center;
         @extend %p-text;
-        @media screen and (min-width: 481px) and (max-width: 768px) {
+        @media screen and (min-width: 481px) and (max-width: 950px) {
             font-size: 1.8rem;
         }
-        @media screen and (min-width:769px) {
+        @media screen and (min-width:951px) {
             font-size: 1.8rem;
         }
     }
@@ -466,10 +466,10 @@ $padding-bottom-pc: 80px;
     &__shipping {
         padding-top: 30px;
         @extend %caution;
-        @media screen and (min-width: 481px) and (max-width: 768px) {
+        @media screen and (min-width: 481px) and (max-width: 950px) {
             font-size: 1.5rem;
         }
-        @media screen and (min-width:769px) {
+        @media screen and (min-width:951px) {
             font-size: 1.5rem;
         }
     }
@@ -477,10 +477,10 @@ $padding-bottom-pc: 80px;
         padding-top: 10px;
         padding-bottom: $padding-bottom;
         @extend %caution;
-        @media screen and (min-width: 481px) and (max-width: 768px) {
+        @media screen and (min-width: 481px) and (max-width: 950px) {
             font-size: 1.5rem;
         }
-        @media screen and (min-width:769px) {
+        @media screen and (min-width:951px) {
             font-size: 1.5rem;
             padding-bottom: $padding-bottom-pc;
         }
@@ -492,7 +492,7 @@ $padding-bottom-pc: 80px;
         @include direction(column)
         @include align (center)
         @include justify (center)
-        @media screen and (min-width:769px) {
+        @media screen and (min-width:951px) {
             width: ceil(100vw / 2);
         }
     }
@@ -502,20 +502,20 @@ $padding-bottom-pc: 80px;
         @include direction(column)
         @include align (center)
         @include justify (center)
-        @media screen and (min-width: 481px) and (max-width: 768px) {
+        @media screen and (min-width: 481px) and (max-width: 950px) {
             width: $responsive-m;
         }
-        @media screen and (min-width:769px) {
+        @media screen and (min-width:951px) {
             width: ceil($section-w / 2);
         }
     }
     &__date-title {
         padding-top: $padding-top;
         @extend %h3-teitle;
-        @media screen and (min-width: 481px) and (max-width: 768px) {
+        @media screen and (min-width: 481px) and (max-width: 950px) {
             font-size: 2.2rem;
         }
-        @media screen and (min-width:769px) {
+        @media screen and (min-width:951px) {
             font-size: 2.2rem;
             padding-bottom: 30px;
         }
@@ -525,11 +525,11 @@ $padding-bottom-pc: 80px;
         padding-top: 30px;
         padding-bottom: 240px;
         position: relative;
-        @media screen and (min-width: 481px) and (max-width: 768px) {
+        @media screen and (min-width: 481px) and (max-width: 950px) {
             width: 35vw;
             padding-bottom: 270px;
         }
-        @media screen and (min-width:769px) {
+        @media screen and (min-width:951px) {
             width: ceil($section-w / 2);
             @include flex
             @include direction(column)
@@ -542,10 +542,10 @@ $padding-bottom-pc: 80px;
         width: 60vw;
         position: absolute;
         z-index: 5;
-        @media screen and (min-width: 481px) and (max-width: 768px) {
+        @media screen and (min-width: 481px) and (max-width: 950px) {
             width: 35vw;
         }
-        @media screen and (min-width:769px) {
+        @media screen and (min-width:951px) {
             width: 19rem;
         }
     }
@@ -569,7 +569,7 @@ $padding-bottom-pc: 80px;
     @include direction(column)
     @include align (center)
     @include justify (center)
-    @media screen and (min-width:769px) {
+    @media screen and (min-width:951px) {
         @include flex
         @include direction(row)
         @include align (center)
@@ -586,27 +586,27 @@ $padding-bottom-pc: 80px;
             @include direction(column)
             @include align (center)
             @include justify (center)
-            @media screen and (min-width: 481px) and (max-width: 768px) {
+            @media screen and (min-width: 481px) and (max-width: 950px) {
                 width: $responsive-m;
             }
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 width: ceil($section-w / 2.1);
                 padding: $padding-top 0 $padding-bottom;
                 margin-right: 2rem;
             }
         }
         &__back-pc {
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 width: 40rem;
             }
         }
         &__title {
             padding-top: $padding-top;
             @extend %h2-title;
-            @media screen and (min-width: 481px) and (max-width: 768px) {
+            @media screen and (min-width: 481px) and (max-width: 950px) {
                 font-size: 2.5rem;
             }
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 font-size: 2.5rem;
                 padding: $padding-top-pc 0 80px;
             }
@@ -614,7 +614,7 @@ $padding-bottom-pc: 80px;
         &__sp-img {
             padding : 30px 0 $padding-top;
             width: 90vw;
-            @media screen and (min-width: 481px) and (max-width: 768px) {
+            @media screen and (min-width: 481px) and (max-width: 950px) {
                 width: 70vw;
             }
         }
@@ -623,10 +623,10 @@ $padding-bottom-pc: 80px;
         &__decorate__title {
             padding-bottom: 20px;
             @extend %h3-teitle;
-            @media screen and (min-width: 481px) and (max-width: 768px) {
+            @media screen and (min-width: 481px) and (max-width: 950px) {
                 font-size: 2.2rem;
             }
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 font-size: 2.2rem;
             }
         }
@@ -635,10 +635,10 @@ $padding-bottom-pc: 80px;
         &__decorate__text {
             padding-bottom: 30px;
             @extend %p-text;
-            @media screen and (min-width: 481px) and (max-width: 768px) {
+            @media screen and (min-width: 481px) and (max-width: 950px) {
                 font-size: 1.8rem;
             }
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 font-size: 1.8rem;
                 padding-bottom: 40px;
             }
@@ -655,7 +655,7 @@ $padding-bottom-pc: 80px;
     @include direction(column)
     @include align (center)
     @include justify (center)
-    @media screen and (min-width:769px) {
+    @media screen and (min-width:951px) {
         @include flex
         @include direction(row)
         @include align (center)
@@ -668,10 +668,10 @@ $padding-bottom-pc: 80px;
             @include direction(column)
             @include align (center)
             @include justify (center)
-            @media screen and (min-width: 481px) and (max-width: 768px) {
+            @media screen and (min-width: 481px) and (max-width: 950px) {
                 width: $responsive-m;
             }
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 width: 40%;
                 @include flex
                 @include direction(column)
@@ -680,7 +680,7 @@ $padding-bottom-pc: 80px;
             }
         }
         &__back-pc {
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 width: 40rem;
             }
         }
@@ -691,10 +691,10 @@ $padding-bottom-pc: 80px;
             text-align: center;
             padding-top: $padding-top;
             @extend %h2-title;
-            @media screen and (min-width: 481px) and (max-width: 768px) {
+            @media screen and (min-width: 481px) and (max-width: 950px) {
                 font-size: 2.5rem;
             }
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 font-size: 2.5rem;
                 padding-top: $padding-top-pc;
             }
@@ -705,26 +705,26 @@ $padding-bottom-pc: 80px;
             background-color: $white;
             margin-top: 15px;
             @extend %p-text;
-            @media screen and (min-width: 481px) and (max-width: 768px) {
+            @media screen and (min-width: 481px) and (max-width: 950px) {
                 font-size: 1.8rem;
             }
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 font-size: 1.8rem;
             }
         }
         &__sp-img {
             width: 100vw;
-            @media screen and (min-width: 481px) and (max-width: 768px) {
+            @media screen and (min-width: 481px) and (max-width: 950px) {
                 width: 70vw;
             }
         }
         &__text {
             padding-top: 30px;
             @extend %p-text;
-            @media screen and (min-width: 481px) and (max-width: 768px) {
+            @media screen and (min-width: 481px) and (max-width: 950px) {
                 font-size: 1.8rem;
             }
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 font-size: 1.8rem;
                 width: 100%;
                 padding-top: 10rem;
@@ -737,10 +737,10 @@ $padding-bottom-pc: 80px;
             @include direction(row)
             @include align (center)
             @include justify (center)
-            @media screen and (min-width: 481px) and (max-width: 768px) {
+            @media screen and (min-width: 481px) and (max-width: 950px) {
                 width: $responsive-m;
             }
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 width: 40rem;
                 @include flex
                 @include direction(row)
@@ -754,20 +754,20 @@ $padding-bottom-pc: 80px;
             @include direction(column)
             @include align (center)
             @include justify (center)
-            @media screen and (min-width: 481px) and (max-width: 768px) {
+            @media screen and (min-width: 481px) and (max-width: 950px) {
                 width: $responsive-m;
             }
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 width: 10rem;
             }
         }
         &__img {
             width: 28vw;
-            @media screen and (min-width: 481px) and (max-width: 768px) {
+            @media screen and (min-width: 481px) and (max-width: 950px) {
                 width: 20vw;
                 margin: 0px 15px;
             }
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 width: 10rem;
             }
         }
@@ -777,11 +777,11 @@ $padding-bottom-pc: 80px;
             position: relative;
             top: -25px;
             @extend %p-text;
-            @media screen and (min-width: 481px) and (max-width: 768px) {
+            @media screen and (min-width: 481px) and (max-width: 950px) {
                 font-size: 1.8rem;
                 margin: 0px 30px;
             }
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 font-size: 1.8rem;
             }
         }
@@ -791,10 +791,10 @@ $padding-bottom-pc: 80px;
             @include direction(column)
             @include align (flex-start)
             @include justify (center)
-            @media screen and (min-width: 481px) and (max-width: 768px) {
+            @media screen and (min-width: 481px) and (max-width: 950px) {
                 width: $responsive-m;
             }
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 width: 100%;
             }
         }
@@ -810,10 +810,10 @@ $padding-bottom-pc: 80px;
             padding: 5px;
             border: 2px solid $gray;
             @extend %p-text;
-            @media screen and (min-width: 481px) and (max-width: 768px) {
+            @media screen and (min-width: 481px) and (max-width: 950px) {
                 font-size: 1.8rem;
             }
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 font-size: 1.8rem;
             }
         }
@@ -831,10 +831,10 @@ $padding-bottom-pc: 80px;
         }
         &__normal {
             @extend %caution;
-            @media screen and (min-width: 481px) and (max-width: 768px) {
+            @media screen and (min-width: 481px) and (max-width: 950px) {
                 font-size: 1.5rem;
             }
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 font-size: 1.5rem;
             }
         }
@@ -842,10 +842,10 @@ $padding-bottom-pc: 80px;
             font-weight: bold;
             padding: 20px 0 $padding-bottom;
             @extend %caution;
-            @media screen and (min-width: 481px) and (max-width: 768px) {
+            @media screen and (min-width: 481px) and (max-width: 950px) {
                 font-size: 1.5rem;
             }
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 font-size: 1.5rem;
                 padding-bottom: $padding-bottom-pc;
             }
@@ -862,24 +862,24 @@ $padding-bottom-pc: 80px;
             text-align: center;
             padding-top: $padding-top;
             @extend %h2-title;
-            @media screen and (min-width: 481px) and (max-width: 768px) {
+            @media screen and (min-width: 481px) and (max-width: 950px) {
                 font-size: 2.5rem;
             }
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 font-size: 2.5rem;
                 padding-top: 100px;
             }
         }
         &__item {
             width: $section-w;
-            @media screen and (min-width: 481px) and (max-width: 768px) {
+            @media screen and (min-width: 481px) and (max-width: 950px) {
                 width: 90vw;
                 @include flex
                 @include direction(column)
                 @include align (center)
                 @include justify (center)
             }
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 padding: 30px 0 150px;
                 @include flex
                 @include direction(row)
@@ -889,14 +889,14 @@ $padding-bottom-pc: 80px;
         }
         &__item__top {
             padding-top: 30px;
-            @media screen and (min-width: 481px) and (max-width: 768px) {
+            @media screen and (min-width: 481px) and (max-width: 950px) {
                 width: 85vw;
                 @include flex
                 @include direction(row)
                 @include align (flex-start)
                 @include justify (space-around)
             }
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 width: 66%;
                 padding-top: 0px;
                 @include flex
@@ -907,7 +907,7 @@ $padding-bottom-pc: 80px;
         }
         &__guaratees {
             padding: 20px 0 $padding-bottom;
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 width: ceil(100% / 3);
                 padding: 0px;
             }
@@ -966,10 +966,10 @@ $padding-bottom-pc: 80px;
         &__guaratees__title {
             padding-bottom: 15px;
             @extend %h3-teitle;
-            @media screen and (min-width: 481px) and (max-width: 768px) {
+            @media screen and (min-width: 481px) and (max-width: 950px) {
                 font-size: 2.2rem;
             }
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 font-size: 2.2rem;
                 padding: 15px 0 20px;
             }
@@ -979,10 +979,10 @@ $padding-bottom-pc: 80px;
         &__guaratees__text {
             text-align: center;
             @extend %p-text;
-            @media screen and (min-width: 481px) and (max-width: 768px) {
+            @media screen and (min-width: 481px) and (max-width: 950px) {
                 font-size: 1.5rem;
             }
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 font-size: 1.8rem;
             }
         }
@@ -996,7 +996,7 @@ $padding-bottom-pc: 80px;
     @include direction(column)
     @include align (center)
     @include justify (center)
-    @media screen and (min-width:769px) {
+    @media screen and (min-width:951px) {
         @include flex
         @include direction(row-reverse)
         @include align (center)
@@ -1008,20 +1008,20 @@ $padding-bottom-pc: 80px;
             @include direction(column)
             @include align (center)
             @include justify (center)
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 width: 40%;
             }
         }
         &__logo {
             width: 35vw;
             padding: $padding-top 0 15px;
-            @media screen and (min-width: 481px) and (max-width: 768px) {
+            @media screen and (min-width: 481px) and (max-width: 950px) {
                 width: 25vw;
             }
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 width: 15vw;
             }
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 width: 15rem;
             }
         }
@@ -1030,11 +1030,11 @@ $padding-bottom-pc: 80px;
             font-weight: bold;
             padding-bottom: 30px;
             @extend %p-text;
-            @media screen and (min-width: 481px) and (max-width: 768px) {
+            @media screen and (min-width: 481px) and (max-width: 950px) {
                 font-size: 1.8rem;
                 padding-bottom: 40px;
             }
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 font-size: 2rem;
                 padding-bottom: 40px;
             }
@@ -1051,27 +1051,27 @@ $padding-bottom-pc: 80px;
         }
         &--opacity {
             &:hover {
-                @media screen and (min-width:769px) {
+                @media screen and (min-width:951px) {
                     opacity: 0.7;
                 }
             }
         }
         &__caution {
             @extend %caution;
-            @media screen and (min-width: 481px) and (max-width: 768px) {
+            @media screen and (min-width: 481px) and (max-width: 950px) {
                 font-size: 1.5rem;
             }
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 font-size: 1.5rem;
                 padding-bottom: 40px;
             }
         }
         &__img {
             width: 100vw;
-            @media screen and (min-width: 481px) and (max-width: 768px) {
+            @media screen and (min-width: 481px) and (max-width: 950px) {
                 width: $responsive-m;
             }
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 width: 45%;
             }
         }
@@ -1091,7 +1091,7 @@ $padding-bottom-pc: 80px;
             @include direction(row)
             @include align (flex-start)
             @include justify (space-between)
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 padding: 40px 0 200px;
                 @include flex
                 @include direction(row)
@@ -1105,7 +1105,7 @@ $padding-bottom-pc: 80px;
             @include direction(column)
             @include align (flex-start)
             @include justify (flex-end)
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 @include flex
                 @include direction(row)
                 @include align (center)
@@ -1113,7 +1113,7 @@ $padding-bottom-pc: 80px;
             }
         }
         &__link {
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 padding-left: 30px;
             }
         }
@@ -1123,11 +1123,11 @@ $padding-bottom-pc: 80px;
             line-height: 3;
             position: relative;
             @extend %p-text;
-            @media screen and (min-width: 481px) and (max-width: 768px) {
+            @media screen and (min-width: 481px) and (max-width: 950px) {
                 font-size: 1.8rem;
                 line-height: 2;
             }
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 font-size: 1.8rem;
             }
         }
@@ -1140,7 +1140,7 @@ $padding-bottom-pc: 80px;
             pointer-events: none;
             left: -20px;
             opacity: 0.3;
-            @media screen and (min-width:769px) {
+            @media screen and (min-width:951px) {
                 width: 45px;
                 height: 45px;
                 left: -22px;
@@ -1165,7 +1165,7 @@ $padding-bottom-pc: 80px;
             font-size: 1.2rem;
             font-weight: bold;
             padding-bottom: $padding-bottom;
-            @media screen and (min-width: 481px) and (max-width: 768px) {
+            @media screen and (min-width: 481px) and (max-width: 950px) {
                 font-size: 1.5rem;
                 text-align: center;
             }
