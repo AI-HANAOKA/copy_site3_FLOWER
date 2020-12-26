@@ -1885,12 +1885,6 @@ html {
 
 @media screen and (min-width: 951px) {
   .footer-view__logo {
-    width: 15vw;
-  }
-}
-
-@media screen and (min-width: 951px) {
-  .footer-view__logo {
     width: 15rem;
   }
 }
@@ -2126,5 +2120,11 @@ html {
 
 .instagram-img {
   width: 60px;
+}
+
+@media screen and (min-width: 951px) {
+  .instagram-img:hover {
+    opacity: 0.7;
+  }
 }
 /*# sourceMappingURL=style.css.map */

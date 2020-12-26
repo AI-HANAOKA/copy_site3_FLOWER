@@ -827,7 +827,6 @@ $padding-bottom-pc: 80px;
         &__discount {
             font-size: 2rem;
             line-height: 1.5;
-            // font-weight: bold;
         }
         &__normal {
             @extend %caution;
@@ -884,7 +883,7 @@ $padding-bottom-pc: 80px;
                 @include flex
                 @include direction(row)
                 @include align (center)
-                @include justify (space-around)            
+                @include justify (space-around)
             }
         }
         &__item__top {
@@ -902,7 +901,7 @@ $padding-bottom-pc: 80px;
                 @include flex
                 @include direction(row)
                 @include align (center)
-                @include justify (space-around)            
+                @include justify (space-around)
             }
         }
         &__guaratees {
@@ -1019,9 +1018,6 @@ $padding-bottom-pc: 80px;
                 width: 25vw;
             }
             @media screen and (min-width:951px) {
-                width: 15vw;
-            }
-            @media screen and (min-width:951px) {
                 width: 15rem;
             }
         }
@@ -1097,7 +1093,6 @@ $padding-bottom-pc: 80px;
                 @include direction(row)
                 @include align (center)
                 @include justify (space-between)
-
             }
         }
         &__list {
@@ -1174,10 +1169,13 @@ $padding-bottom-pc: 80px;
 .instagram-img {
     width: 60px;
 }
-.instagram-img:active {
-    @extend %opacity;
+.instagram-img {
+    &:active {
+        @extend %opacity;
+    }
+    &:hover {
+        @media screen and (min-width:951px){
+            opacity: 0.7;
+        }
+    }
 }
-
-
-
-
