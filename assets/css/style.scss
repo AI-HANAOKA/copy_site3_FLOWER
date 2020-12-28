@@ -114,7 +114,6 @@ $padding-bottom-pc: 80px;
     @include direction(column)
     @include align (center)
     @include justify (center)
-
     @media screen and (min-width:951px) {
         height: 100vh;
         background-image: url("../img/top_pc.jpg");
@@ -162,7 +161,7 @@ $padding-bottom-pc: 80px;
             }
             @media screen and (min-width: 481px) and (max-width: 950px) {
                 font-size: 2rem;
-                padding-bottom: 500px;
+                padding-bottom: 550px;
             }
             @media screen and (min-width:951px) {
                 font-size: 2rem;

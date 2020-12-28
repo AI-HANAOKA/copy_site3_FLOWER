@@ -225,7 +225,7 @@ html {
 @media screen and (min-width: 481px) and (max-width: 950px) {
   .header__text {
     font-size: 2rem;
-    padding-bottom: 500px;
+    padding-bottom: 550px;
   }
 }
 
