@@ -61,12 +61,21 @@ html {
 }
 
 /*------------------------pcのみに表示------------------------*/
-.header__pc {
+.header__pc,
+.footer__sns-pc {
   display: none;
 }
 
+@media screen and (min-width: 481px) and (max-width: 950px) {
+  .header__pc,
+  .footer__sns-pc {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 951px) {
-  .header__pc {
+  .header__pc,
+  .footer__sns-pc {
     display: block;
   }
 }
@@ -86,7 +95,8 @@ html {
 /*------------------------spのみに表示------------------------*/
 @media screen and (min-width: 951px) {
   .product__sp-img,
-  .vase__sp-img {
+  .vase__sp-img,
+  .sp {
     display: none;
   }
 }
@@ -146,6 +156,34 @@ html {
 
 .header__logo-link .logo-img {
   width: 45vw;
+  -webkit-animation: fadein ease-in 1.4s;
+          animation: fadein ease-in 1.4s;
+}
+
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
 }
 
 @media screen and (min-width: 481px) and (max-width: 950px) {
@@ -167,6 +205,21 @@ html {
   letter-spacing: .01em;
   padding-top: 20px;
   padding-bottom: 400px;
+  -webkit-animation: fadein ease-in 1.4s;
+          animation: fadein ease-in 1.4s;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
 }
 
 @media screen and (min-width: 481px) and (max-width: 950px) {
@@ -189,6 +242,8 @@ html {
     color: #fff;
     margin-left: 4rem;
     padding-bottom: 100px;
+    -webkit-animation: fadein2 ease-in 2s;
+            animation: fadein2 ease-in 2s;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -202,6 +257,28 @@ html {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  @-webkit-keyframes fadein2 {
+    0% {
+      opacity: 0;
+    }
+    60% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fadein2 {
+    0% {
+      opacity: 0;
+    }
+    60% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 }
 
@@ -436,6 +513,21 @@ html {
 .header .app-img,
 .header .google-img {
   padding: 30px 5px 20px;
+  -webkit-animation: fadein ease-in 1.4s;
+          animation: fadein ease-in 1.4s;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
 }
 
 @media screen and (min-width: 951px) {
@@ -453,7 +545,23 @@ html {
 
 .header__caution {
   color: #fff;
+  text-align: center;
   padding-bottom: 60px;
+  -webkit-animation: fadein ease-in 1.4s;
+          animation: fadein ease-in 1.4s;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
 }
 
 @media screen and (min-width: 481px) and (max-width: 950px) {
@@ -558,8 +666,20 @@ html {
     background-size: cover;
     background-position: center bottom;
     -ms-flex-item-align: stretch;
-        -ms-grid-row-align: stretch;
         align-self: stretch;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 
@@ -1508,7 +1628,7 @@ html {
 
 /*------------------------order------------------------*/
 .order {
-  width: 100vw;
+  width: 85vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1523,6 +1643,12 @@ html {
       -ms-flex-pack: center;
           justify-content: center;
   /* アニメーション */
+}
+
+@media screen and (min-width: 481px) and (max-width: 950px) {
+  .order {
+    width: 70vw;
+  }
 }
 
 .order__title {
@@ -1924,6 +2050,10 @@ html {
   }
 }
 
+.footer-view__caution {
+  text-align: center;
+}
+
 @media screen and (min-width: 481px) and (max-width: 950px) {
   .footer-view__caution {
     font-size: 1.5rem;
@@ -1972,6 +2102,26 @@ html {
           justify-content: center;
 }
 
+@media screen and (min-width: 951px) {
+  .footer__sns-pc {
+    width: 85vw;
+    padding-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .footer__item {
   width: 85vw;
   padding: 20px 0;
@@ -1992,7 +2142,7 @@ html {
 
 @media screen and (min-width: 951px) {
   .footer__item {
-    padding: 40px 0 200px;
+    padding-bottom: 200px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2065,7 +2215,7 @@ html {
 
 @media screen and (min-width: 951px) {
   .footer--flower {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -2108,6 +2258,7 @@ html {
   color: #86888C;
   font-size: 1.2rem;
   font-weight: bold;
+  text-align: center;
   padding-bottom: 60px;
 }
 
